@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día de San Valentín</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="top-section">
+        <h1 class="top-heading">¡Feliz Día de San Valentín, amor mio!</h1>
+        <p class="top-text">Siempre celebramos al amor con nuestra mera existencia, pero la ocasion es especial. Gracias por ser
+			mi compañera de vida, por estar siempre a mi lado y por hacerme la persona más feliz del mundo. Te amo.
+			</p>
+    </div>
+    <hr>
+    <hr>
+    <button id="playButton">Reproducir sonido</button>
+    <audio id="audio" src="song.mp3"></audio>
+    <script>
+        const playButton = document.getElementById('playButton');
+        const audio = document.getElementById('audio');
+
+        playButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = 'Pausar sonido';
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+                playButton.textContent = 'Reproducir sonido';
+            }
+        });
+    </script>
+    <div class="principal-container">
+        <div class="flowers-container">
+            <div class="flower">
+                <div class="f-wrapper">
+                    <div class="flower__line"></div>
+                    <div class="f">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__leaf flower__leaf--5"></div>
+                        <div class="flower__leaf flower__leaf--6"></div>
+                        <div class="flower__leaf flower__leaf--7"></div>
+                        <div class="flower__leaf flower__leaf--8 flower__fall-down--yellow"></div>
+                    </div>
+                </div>
+
+                <div class="f-wrapper f-wrapper--2">
+                    <div class="flower__line"></div>
+                    <div class="f">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__leaf flower__leaf--5"></div>
+                        <div class="flower__leaf flower__leaf--6"></div>
+                        <div class="flower__leaf flower__leaf--7"></div>
+                        <div class="flower__leaf flower__leaf--8 flower__fall-down--pink"></div>
+                    </div>
+                </div>
+
+                <div class="f-wrapper f-wrapper--3">
+                    <div class="flower__line"></div>
+                    <div class="f">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__leaf flower__leaf--5"></div>
+                        <div class="flower__leaf flower__leaf--6"></div>
+                        <div class="flower__leaf flower__leaf--7"></div>
+                        <div class="flower__leaf flower__leaf--8 flower__fall-down--purple"></div>
+                    </div>
+                </div>
+                <div class="flower__glass"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
